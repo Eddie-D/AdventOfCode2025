@@ -6,7 +6,7 @@ for line in file :
     dir = -1 if line[0] == "L" else 1
     amount = int(line[1:])
     new = (current + (dir * amount))
-    # print(f"{line[0:-1]}: {abs(((dir *(new)) // 100) - (dir * current // 100))}, total: {new}")
+    # The floor idea works only when second number is bigger than first (56 -> 0 would return 0, but 56 -> 100 returns 1) dir multiplication compensates for this
     zeroes += abs(((dir *(new)) // 100) - (dir * current // 100))
     current = new
 
