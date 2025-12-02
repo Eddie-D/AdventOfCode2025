@@ -10,8 +10,8 @@ def checkSections(i) :
     s = str(i)
     l = len(s)
     factors = primefactors(l)
-    # Prime length or single digit length would create one section, so exit now
-    if l == 1 or factors[0] == i : return 0
+    # Single digit length would create one section, so exit now
+    if l == 1 : return 0
 
     for p in factors :
         size = l // p
