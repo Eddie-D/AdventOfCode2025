@@ -8,6 +8,6 @@ for line in file :
             s = str(i)
             if s[:len(s)//2] ==  str(s)[len(s)//2:] :
                 total += i
-                print(f"adding {i}")
+                print(f"Adding: {i}")
 
 print(f"Total is: {total}")

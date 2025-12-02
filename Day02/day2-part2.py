@@ -25,7 +25,7 @@ total = 0
 for line in file :
     pairs = [x.split('-') for x in line.split(',')]
     for start, end in pairs:
-        print(f"Starting {start}")
+        print(f"Starting: {start}")
         for i in range(int(start), int(end) + 1) :
             total += checkSections(i)
 
